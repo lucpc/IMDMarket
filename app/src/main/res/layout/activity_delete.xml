@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <TextView
+        android:id="@+id/tvDeleteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deletar Produto"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_blue_dark"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:layout_marginTop="32dp" />
+    <EditText
+        android:id="@+id/etProductCodeDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Código do Produto"
+        android:inputType="number"
+        android:layout_marginTop="32dp"/>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Deletar"
+        android:backgroundTint="@android:color/holo_blue_dark"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="32dp"/>
+</LinearLayout>
