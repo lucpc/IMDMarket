@@ -4,18 +4,38 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+
     <TextView
-        android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bem Vindo ao IMDMarket"
+        android:text="Bem vindo ao "
         android:fontFamily="casual"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="@android:color/holo_blue_dark"
         android:layout_gravity="center"
-        android:clickable="true"
-        android:layout_marginTop="32dp" />
+        android:layout_marginTop="88dp"
+        android:textColor="@android:color/holo_blue_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IMD"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="@android:color/holo_blue_dark"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Market"
+        android:fontFamily="casual"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:textColor="@android:color/holo_blue_dark"/>
+
 
     <EditText
         android:id="@+id/etUsername"

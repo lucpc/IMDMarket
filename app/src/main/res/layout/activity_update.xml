@@ -1,59 +1,88 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="?android:attr/colorBackground"
+    tools:context=".UpdateActivity">
 
+    <!-- Título -->
     <TextView
         android:id="@+id/tvUpdateTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alterar Produto"
-        android:fontFamily="casual"
+        android:text="Editar Produto"
         android:textSize="24sp"
         android:textStyle="bold"
+        android:fontFamily="casual"
         android:textColor="@android:color/holo_blue_dark"
-        android:layout_gravity="center"
-        android:clickable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="32dp" />
-    <EditText
-        android:id="@+id/etProductCodeUpdate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Código do Produto"
-        android:inputType="number"
-        android:layout_marginTop="32dp"/>
 
+    <!-- Campo para o Nome do Produto -->
     <EditText
         android:id="@+id/etProductNameUpdate"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nome do Produto (Opcional)"
+        android:hint="Novo Nome"
         android:inputType="text"
-        android:layout_marginTop="32dp"/>
+        app:layout_constraintTop_toBottomOf="@id/tvUpdateTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
+    <!-- Campo para a Descrição do Produto -->
     <EditText
         android:id="@+id/etProductDescriptionUpdate"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Descrição (Opcional)"
+        android:hint="Nova Descrição"
         android:inputType="textMultiLine"
-        android:layout_marginTop="32dp"/>
+        app:layout_constraintTop_toBottomOf="@id/etProductNameUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
+    <!-- Campo para o Estoque do Produto -->
     <EditText
         android:id="@+id/etProductStockUpdate"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Estoque (Opcional)"
+        android:hint="Novo Estoque"
         android:inputType="number"
-        android:layout_marginTop="32dp"/>
+        app:layout_constraintTop_toBottomOf="@id/etProductDescriptionUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
 
+    <!-- Botão Salvar -->
     <Button
-        android:id="@+id/btnUpdate"
-        android:layout_width="match_parent"
+        android:id="@+id/btnSaveUpdate"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Alterar"
+        android:text="Salvar Alterações"
         android:backgroundTint="@android:color/holo_blue_dark"
         android:textColor="@android:color/white"
-        android:layout_marginTop="32dp"/>
-</LinearLayout>
+        app:layout_constraintTop_toBottomOf="@id/etProductStockUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- Botão Cancelar -->
+    <Button
+        android:id="@+id/btnCancelUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Cancelar"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/btnSaveUpdate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
