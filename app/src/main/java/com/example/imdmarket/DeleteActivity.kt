@@ -20,7 +20,7 @@ class DeleteActivity : AppCompatActivity() {
                 Toast.makeText(this, "O código do produto é obrigatório", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this, "Produto excluído com sucesso", Toast.LENGTH_SHORT).show()
-                finish() // Volta ao menu
+                finish()
             }
         }
     }

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
     android:background="?android:attr/colorBackground"
+    android:padding="16dp"
     tools:context=".MenuActivity">
 
     <!-- Título -->
@@ -13,68 +13,49 @@
         android:id="@+id/tvMenuTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:clickable="true"
+        android:fontFamily="casual"
+        android:minHeight="48dp"
         android:text="O que deseja fazer?"
+        android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:fontFamily="casual"
-        android:textColor="@android:color/holo_blue_dark"
-        android:layout_gravity="center"
-        android:clickable="true"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Botão de Cadastro -->
+
+
+    <!-- Botão de Listagem -->
     <Button
         android:id="@+id/btnCadastrar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@android:color/holo_blue_dark"
         android:text="Cadastrar Produto"
-        android:backgroundTint="@android:color/holo_blue_dark"
         android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tvMenuTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+        tools:ignore="VisualLintButtonSize,TextContrastCheck" />
 
-    <!-- Botão de Alteração -->
-    <Button
-        android:id="@+id/btnAlterar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Alterar Produto"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/btnCadastrar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
-
-    <!-- Botão de Exclusão -->
-    <Button
-        android:id="@+id/btnExcluir"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Excluir Produto"
-        android:backgroundTint="@android:color/holo_blue_dark"
-        android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/btnAlterar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
-
-    <!-- Botão de Listagem -->
     <Button
         android:id="@+id/btnListar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Listar Produtos"
+        android:layout_marginTop="234dp"
         android:backgroundTint="@android:color/holo_blue_dark"
+        android:text="Listar Produtos"
         android:textColor="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@id/btnExcluir"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints,VisualLintButtonSize,TextContrastCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

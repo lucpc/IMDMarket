@@ -23,6 +23,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="32dp" />
 
+    <!-- Campo para o Código (ID) do Produto -->
+    <EditText
+        android:id="@+id/etProductCodeUpdate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Novo Código (ID)"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/tvUpdateTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
     <!-- Campo para o Nome do Produto -->
     <EditText
         android:id="@+id/etProductNameUpdate"
@@ -30,7 +42,7 @@
         android:layout_height="wrap_content"
         android:hint="Novo Nome"
         android:inputType="text"
-        app:layout_constraintTop_toBottomOf="@id/tvUpdateTitle"
+        app:layout_constraintTop_toBottomOf="@id/etProductCodeUpdate"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp" />

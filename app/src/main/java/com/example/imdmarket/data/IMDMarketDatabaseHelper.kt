@@ -106,15 +106,26 @@ class IMDMarketDatabaseHelper(context: Context) :
     }
 
     // Função para atualizar um produto
-    fun updateProduct(product: Produto): Boolean {
+    fun updateProduct(originalCode: String, updatedProduct: Produto): Boolean {
         val db = writableDatabase
+
+        // Cria os valores para atualizar
         val values = ContentValues().apply {
-            put(COLUMN_NAME, product.nome)
-            put(COLUMN_DESCRIPTION, product.descricao)
-            put(COLUMN_STOCK, product.estoque)
+            put(COLUMN_ID, updatedProduct.codigo)
+            put(COLUMN_NAME, updatedProduct.nome)
+            put(COLUMN_DESCRIPTION, updatedProduct.descricao)
+            put(COLUMN_STOCK, updatedProduct.estoque)
         }
-        val result = db.update(TABLE_PRODUCTS, values, "$COLUMN_ID=?", arrayOf(product.codigo))
+
+        // Atualiza o produto
+        val result = db.update(
+            TABLE_PRODUCTS,
+            values,
+            "$COLUMN_ID = ?",
+            arrayOf(originalCode) // Usa o código original como critério
+        )
         db.close()
         return result > 0
     }
+
 }
